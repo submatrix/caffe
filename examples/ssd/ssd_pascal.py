@@ -333,6 +333,10 @@ gpus = "0,1,2,3"
 gpulist = gpus.split(",")
 num_gpus = len(gpulist)
 
+# JKO since docker does not support GPU yet (nvidia-docker doesn't work on windows) 
+# set num_gpus to 0, which keeps solver_mode as P.Solver.CPU
+num_gpus = 0
+
 # Divide the mini-batch to different GPUs.
 batch_size = 32
 accum_batch_size = 32

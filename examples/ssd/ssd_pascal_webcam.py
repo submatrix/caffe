@@ -99,7 +99,8 @@ resize_height = 300
 # Set the number of test iterations to the maximum integer number.
 test_iter = int(math.pow(2, 29) - 1)
 # Use GPU or CPU
-solver_mode = P.Solver.GPU
+# JKO setting to CPU to force CPU-only mode
+solver_mode = P.Solver.CPU
 # Defining which GPUs to use.
 gpus = "0"
 # Number of frames to be processed per batch.

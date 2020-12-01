@@ -344,6 +344,10 @@ gpus = "0"
 gpulist = gpus.split(",")
 num_gpus = len(gpulist)
 
+# JKO since docker does not support GPU yet (nvidia-docker doesn't work on windows) 
+# set num_gpus to 0, which keeps solver_mode as P.Solver.CPU
+num_gpus = 0
+
 # The number does not matter since we do not do training with this script.
 batch_size = 1
 accum_batch_size = 1

@@ -73,7 +73,9 @@ caffe_root = os.getcwd()
 # Set true if you want to start training right after generating all files.
 run_soon = True
 # The video file path
-video_file = "examples/videos/ILSVRC2015_train_00755001.mp4"
+#video_file = "examples/videos/ILSVRC2015_train_00755001.mp4"
+#video_file = "video.mp4"
+video_file = "front-trimmed.avi"
 
 # The parameters for the video demo
 
@@ -97,7 +99,8 @@ resize_height = 300
 # Set the number of test iterations to the maximum integer number.
 test_iter = int(math.pow(2, 29) - 1)
 # Use GPU or CPU
-solver_mode = P.Solver.GPU
+# JKO setting to CPU to force CPU-only mode
+solver_mode = P.Solver.CPU
 # Defining which GPUs to use.
 gpus = "0"
 # Number of frames to be processed per batch.
